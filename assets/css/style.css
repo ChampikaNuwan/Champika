@@ -1,0 +1,71 @@
+/* assets/css/style.css */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1f2229;
+    border-radius: 5px;
+    border: 2px solid #0a0a0c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #14b8a6;
+}
+
+/* Base styles for GSAP elements to prevent FOUC */
+.gsap-fade-up, .gsap-slide-right, .gsap-slide-left, .gsap-scale {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ThreeJS Canvas styling */
+#canvas-container {
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+#canvas-container canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+
+/* Custom Text Gradient */
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #2dd4bf, #3b82f6);
+}
+
+/* Floating animation for decorative elements */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Custom glow utility */
+.glow-effect {
+    box-shadow: 0 0 40px -10px rgba(20, 184, 166, 0.5);
+}
